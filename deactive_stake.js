@@ -8,7 +8,7 @@ const main = async ()=>{
     const airdropSignature = await connection.requestAirdrop(wallet.publicKey, 2 * LAMPORTS_PER_SOL);
     await connection.confirmTransaction(airdropSignature);
     const balance = await connection.getBalance(wallet.publicKey)
-    console.log("balance");
+    console.log("balance:", balance);
 
     const stakeAccount = Keypair.generate();
 
